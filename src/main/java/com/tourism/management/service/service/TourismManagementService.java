@@ -1,11 +1,12 @@
 package com.tourism.management.service.service;
 
-import com.tourism.management.service.model.BranchDetail;
+import com.tourism.management.service.model.TourismManagementRequest;
+import com.tourism.management.service.model.TourismManagementResponse;
 
 public interface TourismManagementService {
 	
-	public String addPlaces(BranchDetail branchDetail);
+	public TourismManagementResponse addPlaces(TourismManagementRequest tourismManagementRequest);
 	
-	public String updateTariff(BranchDetail branchDetail); 
+	public TourismManagementResponse updateTariff(TourismManagementRequest tourismManagementRequest); 
 
 }

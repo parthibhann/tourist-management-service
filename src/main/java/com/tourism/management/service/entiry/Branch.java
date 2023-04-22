@@ -24,11 +24,11 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Document("Branch")
+@Document("branch")
 public class Branch {
 
 	@Id
-	private int branchId;
+	private String branchId;
 	private String branchName;
 	private String website;	
 	private int contactNo;	

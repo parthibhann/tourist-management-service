@@ -22,7 +22,7 @@ import lombok.Setter;
 @Data
 public class BranchDetail {
 
-	private int branchId;
+	private String branchId;
 	private String branchName;
 	private String website;	
 	private int contactNo;	

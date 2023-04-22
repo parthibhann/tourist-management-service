@@ -22,6 +22,5 @@ public class Place {
 	
 	private String name;
 	private int rate;
-	
 
 }
