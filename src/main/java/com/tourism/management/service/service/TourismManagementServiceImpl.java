@@ -32,11 +32,15 @@ public class TourismManagementServiceImpl implements TourismManagementService {
 		
 		TourismManagementResponse tourismManagementResponse = null;
 		
-		if(tourismManagementRepo.findByBranchName(branch.getBranchName()) != null) {
+		if(tourismManagementRepo.findByBranchName(branch.getBranchName()) == null) {
 			Branch branchResponse = tourismManagementRepo.save(branch);
 			tourismManagementResponse = tourismManagementMapper.prepareBranchDetails(branchResponse);
 			tourismManagementResponse.setStatus("SUCCESS");
 			tourismManagementResponse.setSatusText("Branch Saved Successfully");
+		}else {
+			tourismManagementResponse = new TourismManagementResponse();
+			tourismManagementResponse.setStatus("ERROR");
+			tourismManagementResponse.setSatusText("Branch existe already..!");
 		}
 		
 		return tourismManagementResponse;
